@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Sake.Models;
 
 namespace Sake.Data
 {
@@ -17,7 +18,7 @@ options)
  public DbSet<Utakmica> Utakmica { get; set; }
  public DbSet<GledanjeUtakmice> GledanjeUtakmice { get; set; }
  public DbSet<Ulaznica> Ulaznica { get; set; }
- public DbSet<Igrac> Igrac { get; set; }
+ public DbSet<Igrač> Igrač { get; set; }
  public DbSet<SportskiTim> SportskiTim  { get; set; }
  public DbSet<IgranjeZaTim> IgranjeZaTim { get; set; }
        
@@ -28,7 +29,7 @@ options)
  modelBuilder.Entity<Utakmica>().ToTable("Utakmica");
  modelBuilder.Entity<GledanjeUtakmice>().ToTable("GledanjeUtakmice");
  modelBuilder.Entity<Ulaznica>().ToTable("Ulaznica");
- modelBuilder.Entity<Igrac>().ToTable("Igrac");
+ modelBuilder.Entity<Igrač>().ToTable("Igrač");
  modelBuilder.Entity<SportskiTim>().ToTable("SportskiTim");
  modelBuilder.Entity<IgranjeZaTim>().ToTable("IgranjeZaTim");
            

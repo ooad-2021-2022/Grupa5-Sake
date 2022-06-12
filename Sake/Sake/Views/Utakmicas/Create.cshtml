@@ -1,0 +1,48 @@
+﻿@model Sake.Models.Utakmica
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Utakmica</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdDomaćina" class="control-label"></label>
+                <input asp-for="IdDomaćina" class="form-control" />
+                <span asp-validation-for="IdDomaćina" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdGosta" class="control-label"></label>
+                <input asp-for="IdGosta" class="form-control" />
+                <span asp-validation-for="IdGosta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VrijemeOdržavanja" class="control-label"></label>
+                <input asp-for="VrijemeOdržavanja" class="form-control" />
+                <span asp-validation-for="VrijemeOdržavanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MjestoOdržavanja" class="control-label"></label>
+                <input asp-for="MjestoOdržavanja" class="form-control" />
+                <span asp-validation-for="MjestoOdržavanja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
